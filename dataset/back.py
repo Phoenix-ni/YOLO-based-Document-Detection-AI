@@ -7,7 +7,7 @@ class YOLOv10Model(LabelStudioMLBase):
     def __init__(self, **kwargs):
         super(YOLOv10Model, self).__init__(**kwargs)
 
-        model_path = '/home/zyb/百度飞桨领航团/学习项目/CV项目/第六次汇报/yolov12/runs/detect/train2/weights/best.pt'
+        model_path = 'best.pt' # 模型路径
         self.model = YOLO(model_path)
         self.labels = self.model.names
 
