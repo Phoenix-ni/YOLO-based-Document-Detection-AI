@@ -23,7 +23,7 @@ exit()
 **注:** 若输出为Ture则激活成功,若激活为False则激活不成功
 ### 2. 打开Pytorch官网
 [Pytorch官网地址](https://pytorch.org/)
-![[markdown/pytorch.png]]
+![img][markdown/pytorch.png]
 根据自己环境修改配置获取到相应指令
 例如:
 ```bash
@@ -67,7 +67,7 @@ python yolov11_predict.py --model best.pt --source 要检测的图片的文件�
 ## 图片标注部分
 在训练模型当中,需要大量标注好的数据集,手动标注将会是意见很痛苦的事情,这时候就需要搭建后端,利用小模型帮助标注
 ### 标注流程 
-![[markdown/标注流程.png]]
+![img][markdown/标注流程.png]
 ### 启用教程
 ```bash
 pip install label-studio label-studio-ml ultralytics opencv-python
