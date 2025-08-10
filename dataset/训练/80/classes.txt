@@ -1,0 +1,13 @@
+Abandon
+Document Title
+Footer
+Footnote
+Header
+Img
+Img Caption
+Page Number
+Paragraph Title
+Seal
+Table
+Table Caption
+Text

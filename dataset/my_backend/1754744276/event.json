@@ -1,0 +1,182 @@
+{
+  "event": "TASKS_CREATED",
+  "job_id": "1754744276",
+  "data": {
+    "tasks": [
+      {
+        "id": 18557,
+        "data": {
+          "image": "/data/upload/5/c92cce77-4.jpg"
+        },
+        "meta": {},
+        "created_at": "2025-08-09T12:57:56.049379Z",
+        "updated_at": "2025-08-09T12:57:56.049393Z",
+        "is_labeled": false,
+        "overlap": 1,
+        "inner_id": 434,
+        "total_annotations": 0,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "comment_count": 0,
+        "unresolved_comment_count": 0,
+        "last_comment_updated_at": null,
+        "project": 5,
+        "updated_by": null,
+        "file_upload": 6192,
+        "comment_authors": []
+      }
+    ],
+    "project": {
+      "id": 5,
+      "task_number": 434,
+      "finished_task_number": 432,
+      "total_predictions_number": 356,
+      "total_annotations_number": 432,
+      "num_tasks_with_annotations": 432,
+      "useful_annotation_number": 432,
+      "ground_truth_number": 0,
+      "skipped_annotations_number": 0,
+      "title": "CVproject",
+      "description": "",
+      "label_config": "<View>\n  <Image name=\"image\" value=\"$image\"/>\n  <RectangleLabels name=\"label\" toName=\"image\">\n    \n    \n  <Label value=\"Document Title\" background=\"#FFA39E\"/><Label value=\"Paragraph Title\" background=\"#D4380D\"/><Label value=\"Text\" background=\"#FFC069\"/><Label value=\"Page Number\" background=\"#AD8B00\"/><Label value=\"Footnote\" background=\"#D3F261\"/><Label value=\"Header\" background=\"#389E0D\"/><Label value=\"Footer\" background=\"#5CDBD3\"/><Label value=\"Table\" background=\"#096DD9\"/><Label value=\"Table Caption\" background=\"#ADC6FF\"/><Label value=\"Seal\" background=\"#9254DE\"/><Label value=\"Abandon\" background=\"#F759AB\"/><Label value=\"Img\" background=\"#FFA39E\"/><Label value=\"Img Caption\" background=\"#D4380D\"/></RectangleLabels>\n</View>",
+      "parsed_label_config": {
+        "label": {
+          "type": "RectangleLabels",
+          "to_name": [
+            "image"
+          ],
+          "inputs": [
+            {
+              "type": "Image",
+              "valueType": null,
+              "value": "image"
+            }
+          ],
+          "labels": [
+            "Document Title",
+            "Paragraph Title",
+            "Text",
+            "Page Number",
+            "Footnote",
+            "Header",
+            "Footer",
+            "Table",
+            "Table Caption",
+            "Seal",
+            "Abandon",
+            "Img",
+            "Img Caption"
+          ],
+          "labels_attrs": {
+            "Document Title": {
+              "value": "Document Title",
+              "background": "#FFA39E"
+            },
+            "Paragraph Title": {
+              "value": "Paragraph Title",
+              "background": "#D4380D"
+            },
+            "Text": {
+              "value": "Text",
+              "background": "#FFC069"
+            },
+            "Page Number": {
+              "value": "Page Number",
+              "background": "#AD8B00"
+            },
+            "Footnote": {
+              "value": "Footnote",
+              "background": "#D3F261"
+            },
+            "Header": {
+              "value": "Header",
+              "background": "#389E0D"
+            },
+            "Footer": {
+              "value": "Footer",
+              "background": "#5CDBD3"
+            },
+            "Table": {
+              "value": "Table",
+              "background": "#096DD9"
+            },
+            "Table Caption": {
+              "value": "Table Caption",
+              "background": "#ADC6FF"
+            },
+            "Seal": {
+              "value": "Seal",
+              "background": "#9254DE"
+            },
+            "Abandon": {
+              "value": "Abandon",
+              "background": "#F759AB"
+            },
+            "Img": {
+              "value": "Img",
+              "background": "#FFA39E"
+            },
+            "Img Caption": {
+              "value": "Img Caption",
+              "background": "#D4380D"
+            }
+          }
+        }
+      },
+      "label_config_hash": 6040161087715857837,
+      "expert_instruction": "",
+      "show_instruction": false,
+      "show_skip_button": true,
+      "enable_empty_annotation": true,
+      "reveal_preannotations_interactively": false,
+      "show_annotation_history": false,
+      "show_collab_predictions": true,
+      "evaluate_predictions_automatically": false,
+      "token": "Oip2MrDIxCjN0GMcmZixV5rzAzTt2qOjbO2CtriU",
+      "result_count": 0,
+      "color": "#FFFFFF",
+      "maximum_annotations": 1,
+      "min_annotations_to_start_training": 0,
+      "control_weights": {
+        "label": {
+          "overall": 1.0,
+          "type": "RectangleLabels",
+          "labels": {
+            "Document Title": 1.0,
+            "Paragraph Title": 1.0,
+            "Text": 1.0,
+            "Page Number": 1.0,
+            "Footnote": 1.0,
+            "Header": 1.0,
+            "Footer": 1.0,
+            "Table": 1.0,
+            "Table Caption": 1.0,
+            "Seal": 1.0,
+            "Abandon": 1.0,
+            "Img": 1.0,
+            "Img Caption": 1.0
+          }
+        }
+      },
+      "model_version": "text_detect",
+      "data_types": {
+        "image": "Image"
+      },
+      "is_draft": false,
+      "is_published": false,
+      "created_at": "2025-07-17T06:23:21.160386Z",
+      "updated_at": "2025-08-07T15:49:50.598305Z",
+      "sampling": "Sequential sampling",
+      "skip_queue": "REQUEUE_FOR_OTHERS",
+      "show_ground_truth_first": false,
+      "show_overlap_first": false,
+      "overlap_cohort_percentage": 100,
+      "task_data_login": null,
+      "task_data_password": null,
+      "pinned_at": null,
+      "custom_task_lock_ttl": null,
+      "organization": 1,
+      "created_by": 1
+    }
+  }
+}

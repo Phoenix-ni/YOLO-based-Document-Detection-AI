@@ -1,0 +1,61 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Abandon"
+    },
+    {
+      "id": 1,
+      "name": "Document Title"
+    },
+    {
+      "id": 2,
+      "name": "Footer"
+    },
+    {
+      "id": 3,
+      "name": "Footnote"
+    },
+    {
+      "id": 4,
+      "name": "Header"
+    },
+    {
+      "id": 5,
+      "name": "Img"
+    },
+    {
+      "id": 6,
+      "name": "Img Caption"
+    },
+    {
+      "id": 7,
+      "name": "Page Number"
+    },
+    {
+      "id": 8,
+      "name": "Paragraph Title"
+    },
+    {
+      "id": 9,
+      "name": "Seal"
+    },
+    {
+      "id": 10,
+      "name": "Table"
+    },
+    {
+      "id": 11,
+      "name": "Table Caption"
+    },
+    {
+      "id": 12,
+      "name": "Text"
+    }
+  ],
+  "info": {
+    "year": 2025,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}

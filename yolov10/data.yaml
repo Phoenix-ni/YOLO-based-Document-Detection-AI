@@ -1,0 +1,5 @@
+train: /dataset/train # 训练集路径
+val: /dataset/val # 验证集路径
+
+nc: 13 # 类别数量
+names: ['Abandon','Document Title','Footer','Footnote','Header','Img','Img Caption','Page Number','Paragraph Title','Seal','Table','Table Caption','Text'] # 类别名称
