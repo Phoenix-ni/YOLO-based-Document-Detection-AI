@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>处理结果 - AI图片工坊</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #6c5ce7;
+            --background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--background);
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .image-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-header {
+            padding: 1rem;
+            background: rgba(74, 144, 226, 0.1);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .image-container {
+            position: relative;
+            padding: 1rem;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .comparison-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .results-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            返回上传新图片
+        </a>
+
+        <div class="results-section">
+            <div class="image-card">
+                <div class="image-header">
+                    <h3><i class="fas fa-image"></i> 原始图片</h3>
+                </div>
+                <div class="image-container">
+                    <!-- <img src="{{ original_image }}" alt="原始图片"> -->
+                    <img src="{{ original_image }}" alt="原始图片">
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="image-header">
+                    <h3><i class="fas fa-wand-magic-sparkles"></i> 处理结果</h3>
+                </div>
+                <div class="image-container">
+                    <img src="{{ processed_image }}" alt="处理后的图片">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 图片对比滑块初始化
+        function initComparisonSlider() {
+            const slider = document.querySelector('.comparison-slider');
+            const before = slider.querySelector('#originalImg');
+            const after = slider.querySelector('#processedImg');
+            let isDown = false;
+
+            before.style.width = '50%';
+
+            slider.addEventListener('mousedown', startSlide);
+            slider.addEventListener('touchstart', startSlide);
+            document.addEventListener('mouseup', stopSlide);
+            document.addEventListener('touchend', stopSlide);
+            document.addEventListener('mousemove', moveSlide);
+            document.addEventListener('touchmove', moveSlide);
+
+            function startSlide(e) {
+                isDown = true;
+                slider.classList.add('active');
+            }
+
+            function stopSlide() {
+                isDown = false;
+                slider.classList.remove('active');
+            }
+
+            function moveSlide(e) {
+                if (!isDown) return;
+                const rect = slider.getBoundingClientRect();
+                const x = (e.clientX || e.touches[0].clientX) - rect.left;
+                const percentage = (x / rect.width) * 100;
+                before.style.width = `${Math.max(0, Math.min(100, percentage))}%`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initComparisonSlider);
+    </script>
+</body>
+</html>
