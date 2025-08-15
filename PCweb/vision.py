@@ -18,7 +18,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
 def object_detect(input_path, output_path):
-    model = YOLO('/home/zyb/百度飞桨领航团/学习项目/CV项目/第六次汇报/yolov12/runs/detect/train2/weights/best.pt')
+    model = YOLO('best.pt') # 加载模型
     with Image.open(input_path) as img:
         detect_img =  model.predict(img, save=False, save_txt=False, conf=0.7, line_width=2, save_crop=False,
                                     show_labels=True, show_conf=True, classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
