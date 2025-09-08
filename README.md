@@ -74,7 +74,7 @@ pip install label-studio label-studio-ml ultralytics opencv-python
 ```
 ```bash
 label-studio-ml init my_backend --script back.py --force
-label-studio-ml start yolov11_polygon_backend
+label-studio-ml start ./my_backend
 ```
 之后打开label studio,点击setting--->model--->connect--->输入你的网页地址(在终端可以看到),如果连接成功,可以看到上面有个小绿点,表示连接成功
 **注:**
